@@ -1,0 +1,112 @@
+.grid-item0 {
+  background: black;
+}
+.grid-item1 {
+  background: black;
+}
+.grid-item2 {
+  background: black;
+}
+.grid-item3 {
+  background: black;
+}
+.grid-item4 {
+  background: black;
+}
+.grid-item5 {
+  background: black;
+}
+.grid-item6 {
+  background: black;
+}
+.grid-item7 {
+  background: black;
+}
+.grid-item8 {
+  background: black;
+}
+.grid-item9 {
+  background: black;
+}
+.grid-item10 {
+  background: black;
+}
+.grid-item11 {
+  background: black;
+}
+.grid-item12 {
+  background: black;
+}
+.grid-item13 {
+  background: black;
+}
+.grid-item14 {
+  background: black;
+}
+.grid-item15 {
+  background: black;
+}
+.grid-item16 {
+  background: black;
+}
+.grid-item17 {
+  background: black;
+}
+.grid-item18 {
+  background: black;
+}
+.grid-item19 {
+  background: black;
+}
+.grid-item20 {
+  background: black;
+}
+.grid-item21 {
+  background: black;
+}
+.grid-item22 {
+  background: black;
+}
+.grid-item23 {
+  background: black;
+}
+.grid-item24 {
+  background: black;
+}
+
+.grid-item-static {
+  padding: 1rem;
+  border: 1px solid white;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 120px);
+  color: red;
+  grid-template-rows: repeat(5, 120px);
+  grid-gap: 0;
+  grid-column-end: auto;
+  padding: 20px;
+}
+
+
+.button {
+  height: 80px;
+  width: 300px;
+  background-color: black;
+  color: white;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  font-size: 30px;
+  border-radius: 40px;
+}
+
