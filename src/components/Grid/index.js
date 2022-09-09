@@ -3,39 +3,45 @@ import App from "../../App";
 
 class Floor extends React.Component {
 
-        handleClick = () => {
-            this.getNumber()
+    // function to handle click on the main button
+    handleClick = () => {
+        this.getNumber()
     }
 
+    // function that implements the repetitive behaviour
     getNumber = () => {
         setInterval(this.generateRandomNumber, 500)
     }
 
     generateRandomNumber = () => {
-
-        
-
+ 
+        // loop for each square
         for (let j = 0; j < 25; j++) {
 
+            // create the three random rgb values
             let num = []
             
-        for (let i = 0; i < 3; i++) {
-           num.push(Math.floor(Math.random() * 256 ))
-        }
-        
-        
-        const changeStyle = (num) => {
-            
-            let sheets = document.styleSheets[1]
-            let color = "rgb(" + num[0] + "," + num[1] + "," + num[2] + ")"
-            let styleInput = ".grid-item" + j + " { background: " + color + " }"
-            return sheets.deleteRule(j),
-            sheets.insertRule(styleInput, j)
+            for (let i = 0; i < 3; i++) {
+                num.push(Math.floor(Math.random() * 256 ))
             }
+            
+            // change the style of the squares
+            const changeStyle = (num) => {
+                
+                // accesing the correct css file
+                let sheets = document.styleSheets[1]
+                // generate the complete rgb color value string
+                let color = "rgb(" + num[0] + "," + num[1] + "," + num[2] + ")"
+                // generate styling class that will be inserted to css
+                let styleInput = ".grid-item" + j + " { background-color: #fff; border: solid 2px #fff; box-shadow: inset 35px 0 35px  " + color + ", inset -35px 0 60px  " + color + ";}"
+                // deleating the old class
+                return sheets.deleteRule(j),
+                // implementing the new class
+                sheets.insertRule(styleInput, j)
+            }
+        
             changeStyle(num)
         }
-
-        
       }
 
     render() {
@@ -68,7 +74,6 @@ class Floor extends React.Component {
                 <div className="grid-item22"></div>
                 <div className="grid-item23"></div>
                 <div className="grid-item24"></div>
-                
             </div>
 
             <button className="button" onClick={this.handleClick}>Click me to get wild</button>
