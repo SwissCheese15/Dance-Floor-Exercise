@@ -34,21 +34,12 @@ class Floor extends React.Component {
                 let color = "rgb(" + num[0] + "," + num[1] + "," + num[2] + ")"
                 // generate styling class that will be inserted to css
                 let styleInput = ".grid-item" + j + " { background-color: #fff; border: solid 2px #fff; box-shadow: inset 35px 0 35px  " + color + ", inset -35px 0 60px  " + color + ";}"
-                let styleInput1 = ".grid-item" + j + "::before" + " { font-size: 30px; color: " + color + "; content: \"Hello, I'm Shitcode\"}"
-                
 
-                if (num[0] < 3) {
-                     // deleting the old class
-                     return sheets.deleteRule(j),
-                     // implementing the new class
-                     sheets.insertRule(styleInput1, j)
-                }
-                else {
-                    // deleting the old class
-                    return sheets.deleteRule(j),
-                    // implementing the new class
-                    sheets.insertRule(styleInput, j)
-                }
+                // deleting the old class
+                return sheets.deleteRule(j),
+                // implementing the new class
+                sheets.insertRule(styleInput, j)
+                
                
             }
         
