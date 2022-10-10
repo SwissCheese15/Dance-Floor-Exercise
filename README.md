@@ -1,7 +1,5 @@
 # Dance-Floor-README
 
-## Exercise-Description
-
 First encounter with React JS. Exercise to build a "Dance-Floor" with color-changing tiles for js training.
 
 <br>
